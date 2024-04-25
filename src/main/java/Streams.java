@@ -1,7 +1,6 @@
  // Java program to understand execution
 // of sequential streams
 
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import java.io.*;
 import java.util.*;

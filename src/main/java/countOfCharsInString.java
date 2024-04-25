@@ -1,7 +1,7 @@
 import java.beans.IntrospectionException;
 import java.util.HashMap;
 import java.util.Map;
-
+//Java code to take a string and display the count of each character in the given string
 public class countOfCharsInString {
 
     public static void main(String args[]){

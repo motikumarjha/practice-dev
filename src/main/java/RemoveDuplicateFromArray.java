@@ -1,5 +1,7 @@
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RemoveDuplicateFromArray {
 
@@ -12,7 +14,11 @@ public class RemoveDuplicateFromArray {
         //only this way can be converted to Arrays.asList();
         Integer[] arrayInt = new Integer[] {3,3,3,3,3,5,5,5,5,6,6,7,8,9};
         List<Integer> integerList = Arrays.asList(arrayInt);*/
-        Arrays.stream(arr).distinct().forEach(System.out::println);
+     //   Arrays.stream(arr).distinct().forEach(System.out::println);
+
+       // other way to pass through Set
+        Set<Integer> intSet = new HashSet<>();
+        Arrays.stream(arr).filter(x -> intSet.add(x)).forEach(System.out::println);
     }
 
     static void removeDup(int[] arr){

@@ -1,5 +1,10 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.*;
 
 public class CountOfWordsFromString {
     public static void main(String str[]) {
@@ -7,6 +12,7 @@ public class CountOfWordsFromString {
        // String testStr = "Science blank Maths blank blank";
         String testStr = "Science blank Maths blank blank";
         countAndPrintRepeatedWordOccurences(testStr);
+        countAndPrintRepeatedWordOccurencesJava8(testStr);
 
 
     }
@@ -52,4 +58,13 @@ public class CountOfWordsFromString {
         }
 
     }
+
+    //Using Java 8
+    public static void countAndPrintRepeatedWordOccurencesJava8(
+            String strContent) {
+        String[] strs = strContent.split(" ");
+        Map<String, Integer> mapVal = Arrays.stream(strs).collect(groupingBy(Function.identity(),collectingAndThen(counting(), Long::intValue)));
+   System.out.println(mapVal);
+    }
+
 }

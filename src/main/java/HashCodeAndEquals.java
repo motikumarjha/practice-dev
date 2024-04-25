@@ -5,7 +5,7 @@ import java.util.Objects;
 public class HashCodeAndEquals {
     public static void main(String[] args) {
 
-        Customer customer1 = new Customer(11, "moti", "Bangalore");
+        Customer customer1 = new Customer(11, "motiK", "Bangalore");
         Customer customer2 = new Customer(11, "moti", "Bangalore");
 
         Map<Customer, String> hashmap = new HashMap<Customer, String>();

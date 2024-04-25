@@ -32,10 +32,10 @@ public class FailFastSafeTest {
         CopyOnWriteArrayList<Integer> list =new CopyOnWriteArrayList<Integer>(new Integer[] {11, 22, 33, 44, 55,66});
         Iterator it = list.iterator();
         while (it.hasNext()){
-            System.out.println("copy list so not remove the element");
+            System.out.println("copy list so do not remove the element");
             if(it.next().equals(33)){
                 //if we use remove() on iterator obj it
-                //will not throuw the CCME
+                //will not throw the CCME
                 list.remove(3);
                 System.out.println("No CCME : " + list);
             }
